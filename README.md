@@ -62,7 +62,7 @@ az ad app federated-credential create \
 
 
 
-testResourceGroupResourceId=$(az group create --name ToyWebsiteTest --location westus --query id --output tsv)
+testResourceGroupResourceId=$(az group create --name ToyWebsiteTest --location westeurope --query id --output tsv)
 
 az ad sp create --id $testApplicationRegistrationObjectId
 az role assignment create \
@@ -71,7 +71,7 @@ az role assignment create \
    --scope $testResourceGroupResourceId
 
 
-productionResourceGroupResourceId=$(az group create --name ToyWebsiteProduction --location westus --query id --output tsv)
+productionResourceGroupResourceId=$(az group create --name ToyWebsiteProduction --location westeurope --query id --output tsv)
 
 az ad sp create --id $productionApplicationRegistrationObjectId
 az role assignment create \
